@@ -1,0 +1,13 @@
+
+.content{
+    -webkit-columns: 2;
+    columns: 2;
+}
+.column-content {
+    /* break-inside: avoid-column; */
+    background-color: red;
+}
+
+#col2 {
+    display: inline-block;
+}
