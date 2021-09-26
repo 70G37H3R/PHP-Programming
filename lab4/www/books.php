@@ -76,7 +76,6 @@
 		echo "<td>" . $book->pages_count . "</td>";
 		echo "<td>" . $book->price . "</td>";
 		echo "<td>" . $book->description . "</td>";
-		echo $book;
 		echo "<td>" . $book->author->first_name . " " . $book->author->last_name 
 					. " (" . $book->author->email . ")" . "</td>";
 		echo "</tr>";
