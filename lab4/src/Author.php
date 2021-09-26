@@ -1,0 +1,24 @@
+<?php
+
+namespace CT275\Lab4;
+
+use \Illuminate\Database\Eloquent\Model;
+
+class Author extends Model
+{
+    protected $fillable = ['first_name', 'last_name', 'email'];
+    public $timestamps = false;
+    public function books()
+    {
+        return $this->hasMany('\CT275\Lab4\Book');
+    }
+
+    public function scopeWithWhereHas($query, $relation, $constraint){
+        return $query->whereHas($relation, $constraint)
+        ->with([$relation => $constraint]);
+       }
+
+
+
+    
+}

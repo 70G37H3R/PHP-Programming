@@ -1,0 +1,10 @@
+{
+    "require": {
+        "illuminate/database": "5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "CT275\\Lab4\\": "C:/xampp/htdocs/apps/lab4/src"
+        }
+    }
+}
