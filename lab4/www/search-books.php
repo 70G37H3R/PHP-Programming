@@ -34,7 +34,7 @@ use CT275\Lab4\Author;
                                 
                                 
                                 foreach ($search as $rs) {
-                                    echo "<p> test 2=" . $rs . "</p>";
+                                   
                                     $booklist=$rs->books;
                                     foreach ($booklist as $book) {
                                         echo "<p> Book title=" . $book->title . "</p>";
