@@ -139,7 +139,7 @@ $contacts = CT275\Lab3\Contact::all();
     <script src="//cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
-    //Thong bao thanh cong khi them - sua - xoa
+     <!-- Thong bao thanh cong khi them - sua - xoa -->
     <?php
     if (isset($_SESSION['success']) && $_SESSION['success'] != '') {
 
