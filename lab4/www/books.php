@@ -3,6 +3,7 @@
 	require "../bootstrap.php";
 	use CT275\Lab4\Book;
 	use CT275\Lab4\Author;
+
 	
 	if ($_SERVER['REQUEST_METHOD'] === 'POST')
 	{
@@ -11,6 +12,7 @@
 		
 		$book = new Book($_POST);
 		$author->books()->save($book);
+
 		header("Refresh:0");
 	}
 	
@@ -66,6 +68,7 @@
 		<th>Price</th>
 		<th>Description</th>
 		<th>Author</th>
+		<th>Options</th>
 	</tr>
 <?php
 	
@@ -78,6 +81,16 @@
 		echo "<td>" . $book->description . "</td>";
 		echo "<td>" . $book->author->first_name . " " . $book->author->last_name 
 					. " (" . $book->author->email . ")" . "</td>";
+
+		echo " <td><a href=\"./edit-book.php?upkey=" . $book->id . " \" class=\"btn btn-xs btn-warning\">" .
+			 "<button type=\"submit\" class=\"btn btn-xs btn-danger\" name=\"delete-contact\">" .
+		     "<i alt=\"Edit\" class=\"fa fa-pencil\"> Edit </i></a>";
+
+		echo "<form class=\"delete\" action=\"./del-book.php\" method=\"POST\" style=\"display: inline;\">" .
+		     "<input type=\"hidden\" name=\"delkey\" value=\" ". $book->id ." \"> " .
+             "<button type=\"submit\" class=\"btn btn-xs btn-danger\" name=\"delete-contact\">" . 
+             "<i alt=\"Delete\" class=\"fa fa-trash\"> Delete</i></button> </td>" .
+			 "</form>";
 		echo "</tr>";
 	}
 ?>

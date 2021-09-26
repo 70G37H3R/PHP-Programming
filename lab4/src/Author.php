@@ -13,12 +13,11 @@ class Author extends Model
         return $this->hasMany('\CT275\Lab4\Book');
     }
 
-    public function scopeWithWhereHas($query, $relation, $constraint){
+    public function scopeWithWhereHas($query, $relation, $constraint)
+    {
         return $query->whereHas($relation, $constraint)
-        ->with([$relation => $constraint]);
-       }
+            ->with([$relation => $constraint]);
+    }
 
-
-
-    
+  
 }

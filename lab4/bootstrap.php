@@ -7,7 +7,6 @@ if (DEBUG) {
 }
 session_start();
 require __DIR__ . "/vendor/autoload.php";
-
 use \Illuminate\Database\Capsule\Manager as DbManager;
 
 $dbManager = new DbManager();
