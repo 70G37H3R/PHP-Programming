@@ -48,8 +48,8 @@
 <form >
 	<label>Total books:</label> <?php echo "<p>" . $total . "</p>";?> 
 	<label>Avg price:</label> <?php echo "<p>" . $avg . "</p>";?> 
-	<label>Price:</label> <?php echo "<p>" . $max . "</p>";?> 
-	<label>Description:</label> <?php echo "<p>" . $min . "</p>";?> 
+	<label>Max Price:</label> <?php echo "<p>" . $max . "</p>";?> 
+	<label>Min Price:</label> <?php echo "<p>" . $min . "</p>";?> 
 	
 
 </form>
